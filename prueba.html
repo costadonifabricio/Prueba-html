@@ -19,14 +19,14 @@
       <button onclick="verificarCajaTexto()">boton</button>
     </div>
 
-    <label for="cajaTexto">Ingrese un texto:</label>
+    <label id="cajaTextos">Ingrese un texto:</label>
     <div><input id="cajaTexto" value="" /></div>
     <div><label id="mensaje"></label></div>
 
     <script>
       function verificarCajaTexto() {
-        var cajaTexto = document.getElementById("cajaTexto");
-        var mensaje = document.getElementById("mensaje");
+        let cajaTexto = document.getElementById("cajaTexto");
+        let mensaje = document.getElementById("mensaje");
 
         if (cajaTexto.value === "") {
           mensaje.innerText = "Cargue algo por favor";
