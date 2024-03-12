@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #mensaje {
+        color: red;
+        background-color: yellow;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <style>
-    #mensaje {
-      color: red;
-      background-color: yellow;
-    }
-  </style>
-</head>
+  <body>
+    <h1>Hola</h1>
 
-<body>
-  <h1>Hola</h1>
-  <p>Esto es una prueba</p>
-  <button onclick='verificarCajaTexto()'> 
-    <h1>s</h1>
-  </button>
+    <div>
+      <button onclick="verificarCajaTexto()">
+        boton
+      </button>
+    </div>
 
-  <input id="cajaTexto" value="">Hola</input>
-  <label id="mensaje"></label>
 
-</body>
+    <label for="cajaTexto">Ingrese un texto:</label>
+    <div><input id="cajaTexto" value="" /></div>
+    <div><label id="mensaje"></label></div>
 
-<script>
+    <script>
+      function verificarCajaTexto() {
+        var cajaTexto = document.getElementById("cajaTexto");
+        var mensaje = document.getElementById("mensaje");
 
-  function verificarCajaTexto() {
-    var cajaTexto = document.getElementById("cajaTexto");
-    var mensaje = document.getElementById("mensaje");
-
-    if (cajaTexto.value === "") {
-      mensaje.innerText = "Cargue algo por favor";
-    } else {
-      alert("Texto cargado: " + cajaTexto.value);
-      console.log("Texto cargado: " + cajaTexto.value);
-    }
-  }
-
-</script>
-
+        if (cajaTexto.value === "") {
+          mensaje.innerText = "Cargue algo por favor";
+        } else {
+          mensaje.innerText = "";
+          alert("Texto cargado: " + cajaTexto.value);
+          console.log("Texto cargado: " + cajaTexto.value);
+        }
+      }
+    </script>
+  </body>
 </html>
