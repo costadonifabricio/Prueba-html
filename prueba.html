@@ -5,31 +5,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <style>
+    #mensaje {
+      color: red;
+      background-color: yellow;
+    }
+  </style>
 </head>
 
 <body>
   <h1>Hola</h1>
   <p>Esto es una prueba</p>
-  <button onclick='ejecutar()'>
+  <button onclick='verificarCajaTexto()'> 
     <h1>s</h1>
   </button>
 
-  <input value="">Hola</input>
-
-  <label id="s">s</label>
+  <input id="cajaTexto" value="">Hola</input>
+  <label id="mensaje"></label>
 
 </body>
 
 <script>
 
-  function ejecutar() {
-    alert("Hola");
+  function verificarCajaTexto() {
+    var cajaTexto = document.getElementById("cajaTexto");
+    var mensaje = document.getElementById("mensaje");
 
-    document.getElementById("s").style.backgroundColor = "red";
-
-    console.log("Hola socio");
+    if (cajaTexto.value === "") {
+      mensaje.innerText = "Cargue algo por favor";
+    } else {
+      alert("Texto cargado: " + cajaTexto.value);
+      console.log("Texto cargado: " + cajaTexto.value);
+    }
   }
-
 
 </script>
 
